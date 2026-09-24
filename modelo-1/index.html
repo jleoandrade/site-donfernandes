@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbearia Don Fernandes · Mens Club</title>
+<meta name="description" content="Barbearia Don Fernandes: corte, barba e cuidados masculinos. Agende online ou pelo WhatsApp.">
+<meta property="og:title" content="Barbearia Don Fernandes · Mens Club">
+<meta property="og:description" content="Corte, barba e cuidados masculinos. Agende online ou pelo WhatsApp.">
+<meta property="og:image" content="https://SEU-SITE.vercel.app/assets/logo.png">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B1219;--s1:#111C26;--s2:#172532;--line:#26394A;--tx:#E6EBEF;--mut:#9DABB8;--steel:#BAC5CF;--red:#B8262E;--red-d:#9A1E25;--blue:#2D6A9F;--wa:#177A42}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Barlow,system-ui,sans-serif;font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--steel)}
+a:hover{color:#fff}
+h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:600;line-height:1.1;margin:0;letter-spacing:.01em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.pole{height:8px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#E9EDF0 14px 28px,var(--blue) 28px 42px,#E9EDF0 42px 56px)}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:6px;font-family:Oswald,Impact,sans-serif;font-size:17px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid transparent}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d);color:#fff}
+.btn-ghost{border-color:var(--steel);color:var(--tx)}
+.btn-ghost:hover{background:var(--tx);color:var(--bg)}
+.eyebrow{font-family:Oswald,Impact,sans-serif;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:14px;margin:0 0 18px}
+.eyebrow::before{content:"";width:36px;height:2px;background:var(--red)}
+.head{position:sticky;top:0;z-index:20;background:rgba(11,18,25,.94);border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.head .brand img{height:62px;width:auto}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{color:var(--tx);text-decoration:none;font-family:Oswald,Impact,sans-serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+.nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:1px solid var(--line);border-radius:6px;color:var(--tx)}
+.menu summary::-webkit-details-marker{display:none}
+.menu .ic{width:24px;height:24px}
+.menu nav{position:absolute;right:0;top:58px;background:var(--s1);border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;min-width:220px}
+.menu nav a{color:var(--tx);text-decoration:none;padding:12px 14px;font-family:Oswald,Impact,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:15px}
+.hero{padding:88px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:76px;text-transform:uppercase}
+.hero h1 span{color:var(--steel)}
+.hero p.lead{font-size:20px;color:var(--mut);max-width:540px;margin:24px 0 36px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);color:var(--mut);font-size:16px}
+.facts div{display:flex;align-items:center;gap:10px}
+.facts .ic{color:var(--red)}
+.hero-logo{background:#101B25;border:1px solid var(--line);border-radius:50%;aspect-ratio:1;display:grid;place-items:center;padding:40px}
+section{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px}
+.sec-head h2{font-size:52px;text-transform:uppercase}
+.sec-head p{color:var(--mut);max-width:440px;margin:0}
+.alt{background:var(--s1)}
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 64px}
+.svc-item{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.svc-item h3{font-size:24px;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.svc-item p{margin:6px 0 0;color:var(--mut);font-size:16px}
+.price{font-family:Oswald,Impact,sans-serif;font-size:24px;color:var(--steel);white-space:nowrap}
+.center{text-align:center;margin-top:48px}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.plan{background:var(--s2);border:1px solid var(--line);border-radius:10px;padding:36px 32px;display:flex;flex-direction:column;gap:18px}
+.plan.hi{border:2px solid var(--red);position:relative}
+.tag{position:absolute;top:-15px;left:32px;background:var(--red);color:#fff;font-family:Oswald,Impact,sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:4px 12px;border-radius:4px}
+.plan h3{font-size:28px;text-transform:uppercase}
+.plan .val{font-family:Oswald,Impact,sans-serif;font-size:48px;line-height:1}
+.plan .val small{font-size:18px;color:var(--mut);font-family:Barlow,sans-serif}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;color:var(--mut);flex-grow:1}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li .ic{color:var(--red);margin-top:3px}
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ph{background:repeating-linear-gradient(135deg,#132029 0 14px,#17252F 14px 28px);border:1px dashed #33495B;display:grid;place-items:center;color:var(--mut);font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-radius:8px}
+.member .ph{aspect-ratio:4/5}
+.member h3{font-size:24px;text-transform:uppercase;margin-top:18px}
+.member p{margin:4px 0 0;color:var(--mut)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gallery .ph{aspect-ratio:1}
+.reviews{background:var(--s2);border:1px solid var(--line);border-radius:12px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:40px}
+.stars{display:flex;gap:6px;color:#D9A441;margin-bottom:14px}
+.stars .ic{fill:currentColor;width:24px;height:24px}
+.reviews h2{font-size:40px;text-transform:uppercase}
+.reviews p{color:var(--mut);margin:12px 0 0;max-width:560px}
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:Oswald,Impact,sans-serif;font-size:21px;letter-spacing:.03em;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-size:26px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 22px;color:var(--mut)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.card{background:var(--s1);border:1px solid var(--line);border-radius:12px;padding:40px}
+.card h3{font-size:28px;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.card h3 .ic{color:var(--red);width:26px;height:26px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--steel)}
+.card p{color:var(--mut);margin:0 0 24px}
+.card .ctas{margin-top:8px}
+.final{text-align:center;padding:100px 0;background:var(--s1);border-top:1px solid var(--line)}
+.final h2{font-size:58px;text-transform:uppercase}
+.final p{color:var(--mut);margin:16px auto 34px;max-width:560px}
+.final .ctas{justify-content:center}
+footer{padding:48px 0;border-top:1px solid var(--line);color:var(--mut);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer img{height:56px;width:auto}
+footer nav{display:flex;gap:24px;flex-wrap:wrap}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:30;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.wa-float:hover{background:#12663A;color:#fff}
+.wa-float .ic{width:24px;height:24px}
+@media (max-width:960px){
+.nav{display:none}
+.menu{display:block}
+.hero{padding:48px 0 64px}
+.hero .wrap{grid-template-columns:1fr;gap:32px}
+.hero-logo{order:-1;max-width:340px;margin:0 auto;padding:24px}
+.hero h1{font-size:48px}
+.hero p.lead{font-size:18px}
+section{padding:64px 0}
+.sec-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+.sec-head h2{font-size:38px}
+.svc{grid-template-columns:1fr}
+.plans,.team{grid-template-columns:1fr}
+.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.reviews{flex-direction:column;align-items:flex-start;padding:32px}
+.reviews h2{font-size:32px}
+.visit{grid-template-columns:1fr;gap:24px}
+.card{padding:28px}
+.final{padding:64px 0}
+.final h2{font-size:38px}
+}
+@media (max-width:560px){
+.wrap{padding:0 20px}
+.head .wrap{height:72px}
+.head .brand img{height:50px}
+.hero h1{font-size:40px}
+.btn{width:100%}
+.svc-item h3{font-size:20px}
+.wa-float span{display:none}
+.wa-float{padding:16px}
+}
+</style>
+</head>
+<body>
+<div class="pole"></div>
+<header class="head">
+<div class="wrap">
+<a class="brand" href="#inicio" aria-label="Barbearia Don Fernandes, início"><img src="../assets/logo.webp" alt="Barbearia Don Fernandes Mens Club"></a>
+<nav class="nav" aria-label="Principal">
+<a href="#servicos">Serviços</a>
+<a href="#club">Mens Club</a>
+<a href="#equipe">Equipe</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+<a class="btn btn-red" href="https://SEU-LINK-DE-AGENDAMENTO.com.br" target="_blank" rel="noopener">Agendar</a>
+</nav>
+<details class="menu">
+<summary aria-label="Abrir menu"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<nav aria-label="Menu">
+<a href="#servicos">Serviços</a>
+<a href="#club">Mens Club</a>
+<a href="#equipe">Equipe</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+<a href="https://SEU-LINK-DE-AGENDAMENTO.com.br" target="_blank" rel="noopener">Agendar horário</a>
+</nav>
+</details>
+</div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+<div class="wrap">
+<div>
+<p class="eyebrow">Barbearia · Mens Club</p>
+<h1>Tradição na navalha. <span>Estilo no detalhe.</span></h1>
+<p class="lead">Na Don Fernandes, cada corte é feito com calma, técnica e uma boa conversa. Agende em poucos cliques ou chame a gente no WhatsApp.</p>
+<div class="ctas">
+<a class="btn btn-red" href="https://SEU-LINK-DE-AGENDAMENTO.com.br" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Agendar horário</a>
+<a class="btn btn-ghost" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Don%20Fernandes." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
+</div>
+<div class="facts">
+<div><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>[Rua Exemplo, 000 · Bairro]</div>
+<div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Seg a sáb · [09h às 20h]</div>
+</div>
+</div>
+<div class="hero-logo"><img src="../assets/logo.webp" alt=""></div>
+</div>
+</section>
+
+<div class="pole"></div>
+
+<section id="servicos" class="alt">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">O que fazemos</p><h2>Serviços</h2></div>
+<p>Valores de referência. Consulte combos e horários disponíveis no agendamento online.</p>
+</div>
+<div class="svc">
+<div class="svc-item"><div><h3>Corte masculino</h3><p>Tesoura e máquina, finalizado com lavagem e styling.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Barba completa</h3><p>Toalha quente, navalha e hidratação.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Corte + barba</h3><p>O combo completo da casa.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Pezinho e acabamento</h3><p>Manutenção rápida entre um corte e outro.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Sobrancelha</h3><p>Alinhamento na navalha ou pinça.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Pigmentação</h3><p>Corrige falhas de barba e cabelo.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Luzes e platinado</h3><p>Coloração com produtos profissionais.</p></div><span class="price">R$ 00</span></div>
+<div class="svc-item"><div><h3>Limpeza de pele</h3><p>Esfoliação, máscara e hidratação facial.</p></div><span class="price">R$ 00</span></div>
+</div>
+<div class="center"><a class="btn btn-red" href="https://SEU-LINK-DE-AGENDAMENTO.com.br" target="_blank" rel="noopener">Ver horários disponíveis</a></div>
+</div>
+</section>
+
+<section id="club">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Assinatura mensal</p><h2>Don Fernandes Mens Club</h2></div>
+<p>Pague um valor fixo por mês e mantenha o visual sempre em dia, com prioridade na agenda.</p>
+</div>
+<div class="plans">
+<div class="plan">
+<h3>Club Corte</h3>
+<div class="val">R$ 00<small> /mês</small></div>
+<ul>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[Cortes inclusos no mês]</li>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Prioridade no agendamento</li>
+</ul>
+<a class="btn btn-ghost" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Mens%20Club." target="_blank" rel="noopener">Quero assinar</a>
+</div>
+<div class="plan hi">
+<span class="tag">Completo</span>
+<h3>Club Corte + Barba</h3>
+<div class="val">R$ 00<small> /mês</small></div>
+<ul>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[Cortes e barbas inclusos no mês]</li>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Prioridade no agendamento</li>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[Benefício extra do clube]</li>
+</ul>
+<a class="btn btn-red" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Mens%20Club." target="_blank" rel="noopener">Quero assinar</a>
+</div>
+<div class="plan">
+<h3>Club Barba</h3>
+<div class="val">R$ 00<small> /mês</small></div>
+<ul>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[Barbas inclusas no mês]</li>
+<li><svg class="ic" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Prioridade no agendamento</li>
+</ul>
+<a class="btn btn-ghost" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Mens%20Club." target="_blank" rel="noopener">Quero assinar</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="equipe" class="alt">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Quem cuida de você</p><h2>Nossa equipe</h2></div>
+<p>Escolha seu barbeiro preferido direto no agendamento.</p>
+</div>
+<div class="team">
+<div class="member"><div class="ph">Foto do barbeiro</div><h3>[Nome do barbeiro]</h3><p>[Especialidade: degradê, navalhado]</p></div>
+<div class="member"><div class="ph">Foto do barbeiro</div><h3>[Nome do barbeiro]</h3><p>[Especialidade: barba e visagismo]</p></div>
+<div class="member"><div class="ph">Foto do barbeiro</div><h3>[Nome do barbeiro]</h3><p>[Especialidade: cortes clássicos]</p></div>
+</div>
+</div>
+</section>
+
+<section id="galeria">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Trabalhos recentes</p><h2>Galeria</h2></div>
+<a class="btn btn-ghost" href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Ver no Instagram</a>
+</div>
+<div class="gallery">
+<div class="ph">Foto de corte</div>
+<div class="ph">Foto de barba</div>
+<div class="ph">Foto do ambiente</div>
+<div class="ph">Foto de corte</div>
+<div class="ph">Foto de barba</div>
+<div class="ph">Foto do ambiente</div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<div class="reviews">
+<div>
+<div class="stars" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg></div>
+<h2>O que dizem nossos clientes</h2>
+<p>Veja as avaliações de quem já passou pela cadeira da Don Fernandes e conte como foi a sua experiência.</p>
+</div>
+<div class="ctas">
+<a class="btn btn-ghost" href="https://maps.google.com/?q=Barbearia+Don+Fernandes" target="_blank" rel="noopener">Ver avaliações no Google</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="duvidas">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Dúvidas frequentes</p><h2>Perguntas</h2></div>
+</div>
+<div class="faq">
+<details><summary>Preciso agendar ou posso ir direto?</summary><p>Recomendamos agendar pelo link para garantir seu horário. Encaixes são feitos conforme a disponibilidade da agenda.</p></details>
+<details><summary>Quais formas de pagamento vocês aceitam?</summary><p>[Pix, cartão de crédito e débito, dinheiro.]</p></details>
+<details><summary>Como funciona o Mens Club?</summary><p>Você paga um valor fixo por mês e usa os serviços do seu plano com prioridade na agenda. Fale com a gente no WhatsApp para assinar.</p></details>
+<details><summary>Atendem crianças?</summary><p>[Sim, a partir de X anos, acompanhadas de um responsável.]</p></details>
+</div>
+</div>
+</section>
+
+<section id="contato" class="alt">
+<div class="wrap">
+<div class="visit">
+<div class="card">
+<h3><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Horários</h3>
+<table class="hours"><tbody>
+<tr><td>Segunda a sexta</td><td>[09h às 20h]</td></tr>
+<tr><td>Sábado</td><td>[09h às 18h]</td></tr>
+<tr><td>Domingo e feriados</td><td>[Fechado]</td></tr>
+</tbody></table>
+</div>
+<div class="card">
+<h3><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Onde estamos</h3>
+<p>[Rua Exemplo, 000 · Bairro · Cidade/UF · CEP 00000-000]<br>Telefone e WhatsApp: [(00) 00000-0000]</p>
+<div class="ctas">
+<a class="btn btn-ghost" href="https://maps.google.com/?q=Barbearia+Don+Fernandes" target="_blank" rel="noopener">Como chegar</a>
+<a class="btn btn-ghost" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Don%20Fernandes." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap">
+<h2>Sua cadeira está esperando</h2>
+<p>Escolha o serviço, o barbeiro e o horário. Leva menos de um minuto.</p>
+<div class="ctas">
+<a class="btn btn-red" href="https://SEU-LINK-DE-AGENDAMENTO.com.br" target="_blank" rel="noopener">Agendar agora</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<img src="../assets/logo.webp" alt="Barbearia Don Fernandes">
+<nav aria-label="Rodapé">
+<a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener">Instagram</a>
+<a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://maps.google.com/?q=Barbearia+Don+Fernandes" target="_blank" rel="noopener">Google Maps</a>
+</nav>
+<span>© 2026 Barbearia Don Fernandes · Mens Club</span>
+</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Don%20Fernandes." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg><span>WhatsApp</span></a>
+</body>
+</html>
